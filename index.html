@@ -1,0 +1,634 @@
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="Origin Admin - Bootstrap Admin Template">
+		<meta name="author" content="Łukasz Holeczek">
+		<meta name="keyword" content="Origin, Admin, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+	    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/ico/apple-touch-icon-57-precomposed.png">
+		<link rel="shortcut icon" href="assets/ico/favicon.png">
+
+	    <title>Payments Switch</title>
+
+	    <!-- Bootstrap core CSS -->
+	    <link href="assets/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-style">
+
+		<!-- Remove following comment to add Right to Left Support or add class rtl to body -->
+		<!-- <link href="assets/css/bootstrap-rtl.min.css" rel="stylesheet"> -->
+
+		<link href="assets/css/jquery.mmenu.css" rel="stylesheet">
+		<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+		<!-- page css files -->
+		<link href="assets/css/climacons-font.css" rel="stylesheet">
+
+		<link href="assets/plugins/jquery-ui/css/jquery-ui-1.10.4.min.css" rel="stylesheet">
+		<link href="assets/plugins/fullcalendar/css/fullcalendar.css" rel="stylesheet">
+		<link href="assets/plugins/morris/css/morris.css" rel="stylesheet">
+		<link href="assets/plugins/jvectormap/css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
+
+	    <!-- Custom styles for this template -->
+	    <link href="assets/css/style.min.css" rel="stylesheet" id="main-style">
+		<link href="assets/css/add-ons.min.css" rel="stylesheet">
+
+		<!-- Themes -->
+	    <link href="assets/css/themes.min.css" rel="stylesheet">
+
+		<!-- Remove following comment to add Right to Left Support or add class rtl to body -->
+		<!-- <link href="assets/css/style.rtl.min.css" rel="stylesheet"> -->
+
+	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	    <!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	</head>
+
+
+	<!-- BODY options, add following classes to body to change options
+
+		1. 'sidebar-minified'     - Switch sidebar to minified version (width 50px)
+		2. 'sidebar-hidden'		  - Hide sidebar
+		3. 'rtl'				  - Switch to Right to Left Mode
+		4. 'container'			  - Boxed layout
+		5. 'static-sidebar'		  - Static Sidebar
+		6. 'static-header'		  - Static Header
+		7. 'hidden-usage'		  - Hidden Usage Bar
+
+		Themes:
+
+		1. 'elegant'			  - Elegant Theme
+		2. 'sky'				  - Sky Theme
+
+	-->
+	</head>
+</head>
+
+<body >
+
+		<!-- start: Layout Settings -->
+	<div id="theme-settings" class="hidden-sm hidden-xs">
+		<div id="open-close">
+			<i class="fa fa-cog"></i>
+		</div>
+		<h4>Options</h4>
+		<ul id="options">
+			<li>
+				<label class="custom-checkbox-item pull-left">
+					<input id="sm" class="custom-checkbox" type="checkbox"/>
+					<span class="custom-checkbox-mark"></span>
+				</label>
+				<span class="desc">Sidebar Minified</span>
+			</li>
+			<li>
+				<label class="custom-checkbox-item pull-left">
+					<input id="sh" class="custom-checkbox" type="checkbox"/>
+					<span class="custom-checkbox-mark"></span>
+				</label>
+				<span class="desc">Sidebar Hidden</span>
+			</li>
+			<li>
+				<label class="custom-checkbox-item pull-left">
+					<input id="rtl" class="custom-checkbox" type="checkbox"/>
+					<span class="custom-checkbox-mark"></span>
+				</label>
+				<span class="desc">Right to Left</span>
+			</li>
+			<li>
+				<label class="custom-checkbox-item pull-left">
+					<input id="bl" class="custom-checkbox" type="checkbox"/>
+					<span class="custom-checkbox-mark"></span>
+				</label>
+				<span class="desc">Boxed Layout</span>
+			</li>
+			<li>
+				<label class="custom-checkbox-item pull-left">
+					<input id="ss" class="custom-checkbox" type="checkbox"/>
+					<span class="custom-checkbox-mark"></span>
+				</label>
+				<span class="desc">Static Sidebar</span>
+			</li>
+			<li>
+				<label class="custom-checkbox-item pull-left">
+					<input id="she" class="custom-checkbox" type="checkbox"/>
+					<span class="custom-checkbox-mark"></span>
+				</label>
+				<span class="desc">Static Header</span>
+			</li>
+			<li>
+				<label class="custom-checkbox-item pull-left">
+					<input id="hu" class="custom-checkbox" type="checkbox"/>
+					<span class="custom-checkbox-mark"></span>
+				</label>
+				<span class="desc">Hidden Usage</span>
+			</li>
+		</ul>
+
+		<hr>
+
+		<h4>Themes</h4>
+		<ul id="themes">
+			<li>
+				<label class="custom-checkbox-item pull-left">
+					<input id="default" class="custom-checkbox" type="checkbox"/>
+					<span class="custom-checkbox-mark"></span>
+				</label>
+				<span class="desc">Default</span>
+			</li>
+			<li>
+				<label class="custom-checkbox-item pull-left">
+					<input id="elegant" class="custom-checkbox" type="checkbox"/>
+					<span class="custom-checkbox-mark"></span>
+				</label>
+				<span class="desc">Elegant</span>
+			</li>
+			<li>
+				<label class="custom-checkbox-item pull-left">
+					<input id="sky" class="custom-checkbox" type="checkbox"/>
+					<span class="custom-checkbox-mark"></span>
+				</label>
+				<span class="desc">Sky</span>
+			</li>
+		</ul>
+
+		<hr>
+
+		<button type="button" class="btn btn-success btn-block" id="restore">factory settings</button>
+
+	</div>
+	<!-- end: Layout Settings -->
+	<!-- start: Header -->
+	<div class="navbar" role="navigation">
+		<div class="container-fluid">
+			<ul class="nav navbar-nav navbar-actions navbar-left">
+				<li class="visible-md visible-lg"><a href="index.html#" id="main-menu-toggle"><i class="fa fa-bars"></i></a></li>
+				<li class="visible-xs visible-sm"><a href="index.html#" id="sidebar-menu"><i class="fa fa-bars"></i></a></li>
+			</ul>
+			<form class="navbar-form navbar-left">
+				<i class="fa fa-search"></i>
+				<button type="button" class="btn btn-success">Search</button>
+			</form>
+      <strong>From<strong> <input id="date" type="date">  To <input id="date" type="date">
+		</div>
+	</div>
+	<!-- end: Header -->
+
+
+
+		<!-- start: Main Menu -->
+		<div class="sidebar ">
+
+			<div class="sidebar-collapse">
+
+				<div class="sidebar-header">
+
+					<img src="assets/img/avatar.jpg">
+
+					<h2>Admin</h2>
+					<h3>admin@email.com</h3>
+
+					<div class="user-menu">
+						<a id="sidebar-minify" href="index.html#"><i class="fa fa-ellipsis-v"></i></a>
+					</div>
+
+				</div>
+
+				<div class="sidebar-menu">
+					<ul class="nav nav-sidebar">
+
+						<li><a href="index.html"><i class="fa fa-bar-chart-o"></i><span class="text"> Dashboard </span></a></li>
+
+
+						<li><a href="index.html"><i class="fa fa-dashboard"></i><span class="text"> Accounts</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="sidebar-footer">
+
+				<ul class="sidebar-footer-menu">
+					<li><a href="index.html#"><i class="fa fa-cog"></i> Settings</a></li>
+					<li><a href="index.html#"><i class="fa fa-sign-out"></i> Logout</a></li>
+				</ul>
+
+				<div class="sidebar-brand">
+					Payments Switch
+				</div>
+
+				<ul class="sidebar-terms">
+					<li><a href="index.html#">Terms</a></li>
+					<li><a href="index.html#">Privacy</a></li>
+					<li><a href="index.html#">Help</a></li>
+					<li><a href="index.html#">About</a></li>
+				</ul>
+
+			</div>
+		</div>
+		<!-- end: Main Menu -->
+
+		<!-- start: Content -->
+		<div class="main ">
+
+<a href="page-invoice.html#" class="btn btn-info" onclick="javascript:window.print();"><i class="fa fa-print"></i> Print</a>
+
+			<div class="row">
+
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="info-box danger">
+						<i class="fa fa-dollar"></i>
+						<div class="count">KES9,907</div>
+						<div class="title">Balance</div>
+						<div class="desc">Today</div>
+					</div><!--/.info-box-->
+				</div><!--/.col-->
+
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="info-box info">
+						<i class="fa fa-smile-o"></i>
+						<div class="count">7</div>
+						<div class="title">Transactions</div>
+						<div class="desc">Today</div>
+					</div><!--/.info-box-->
+				</div><!--/.col-->
+
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="info-box warning">
+						<i class="fa fa-cloud-download"></i>
+						<div class="count">3</div>
+						<div class="title">M-pesa</div>
+						<div class="desc">Today</div>
+					</div><!--/.info-box-->
+				</div><!--/.col-->
+
+				<div class="col-lg-3 col-md-6 col-sm-6">
+					<div class="info-box success">
+						<i class="fa fa-comments-o"></i>
+						<div class="count">4</div>
+						<div class="title">Others</div>
+						<div class="desc">Today</div>
+					</div><!--/.info-box-->
+				</div><!--/.col-->
+
+			</div><!--/.row-->
+
+			<div class="row">
+
+				<div class="col-lg-3 col-md-4">
+					<div class="panel panel-default">
+
+						<div class="panel-heading">
+							<h2><i class="fa fa-check"></i>Transactions</h2>
+							<div class="panel-actions">
+								<a href="index.html#" class="btn-setting"><i class="fa fa-wrench"></i></a>
+								<a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+								<a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+							</div>
+						</div>
+
+						<div class="panel-body">
+							<p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small></p>
+							</br/>
+							<div class="graph-container">
+								<div id="hero-donut" class="graph" style="height: 271px;"></div>
+							</div>
+						</div>
+					</div>
+				</div><!--/col-->
+
+				<div class="col-lg-9 col-md-8">
+
+					<div class="panel panel-default">
+
+						<div class="panel-heading">
+							<i class="fa fa-check"></i><h2>Transactions</h2>
+
+							<div class="panel-actions">
+								<a href="index.html#" class="btn-setting"><i class="fa fa-wrench"></i></a>
+								<a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+								<a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
+							</div>
+							<label class="switch switch-info pull-right">
+						      	<input type="checkbox" class="switch-input" checked>
+						      	<span class="switch-label" data-on="On" data-off="Off"></span>
+						      	<span class="switch-handle"></span>
+						    </label>
+							<span class="pull-right">Live</span>
+						</div>
+
+						<div class="panel-body">
+
+							<p><small>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</small></p>
+							</br/>
+
+							<div id="flot-main" style="height:292px"></div>
+
+						</div>
+
+					</div>
+
+				</div><!--/col-->
+
+
+
+			</div><!--/row-->
+
+
+
+
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h2><i class="fa fa-align-justify"></i><span class="break"></span>Payments Report</h2>
+							<div class="panel-actions">
+								<a href="table.html#" class="btn-setting"><i class="fa fa-wrench"></i></a>
+								<a href="table.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+								<a href="table.html#" class="btn-close"><i class="fa fa-times"></i></a>
+							</div>
+						</div>
+						<div class="panel-body">
+							<table class="table table-bordered table-striped table-condensed">
+								  <thead>
+									  <tr>
+										  <th>Account</th>
+										  <th>Account Name</th>
+										  <th>Amount</th>
+										  <th>Paid to</th>
+											<th>Date</th>
+											<th>Status</th>
+									  </tr>
+								  </thead>
+								  <tbody>
+									<tr>
+										<td>74849293</td>
+										<td>User One</td>
+										<td>75,848</td>
+										<td>892562</td>
+										<td>2018/02/01</td>
+										<td>
+											<span class="label label-success">Active</span>
+										</td>
+									</tr>
+									<tr>
+										<td>74849293</td>
+										<td>User One</td>
+										<td>75,848</td>
+										<td>892562</td>
+										<td>2018/02/01</td>
+										<td>
+											<span class="label label-danger">Banned</span>
+										</td>
+									</tr>
+									<tr>
+										<td>74849293</td>
+										<td>User One</td>
+										<td>75,848</td>
+										<td>892562</td>
+										<td>2018/02/01</td>
+										<td>
+											<span class="label label-default">Inactive</span>
+										</td>
+									</tr>
+									<tr>
+										<td>74849293</td>
+										<td>User One</td>
+										<td>75,848</td>
+										<td>892562</td>
+										<td>2018/02/01</td>
+										<td>
+											<span class="label label-warning">Pending</span>
+										</td>
+									</tr>
+									<tr>
+										<td>74849293</td>
+										<td>User One</td>
+										<td>75,848</td>
+										<td>892562</td>
+										<td>2018/02/01</td>
+										<td>
+											<span class="label label-success">Active</span>
+										</td>
+									</tr>
+									<tr>
+										<td>74849293</td>
+										<td>User One</td>
+										<td>75,848</td>
+										<td>892562</td>
+										<td>2018/02/01</td>
+										<td>
+											<span class="label label-danger">Banned</span>
+										</td>
+									</tr>
+									<tr>
+										<td>74849293</td>
+										<td>User One</td>
+										<td>75,848</td>
+										<td>892562</td>
+										<td>2018/02/01</td>
+										<td>
+											<span class="label label-danger">Banned</span>
+										</td>
+									</tr>
+									<tr>
+										<td>74849293</td>
+										<td>User One</td>
+										<td>75,848</td>
+										<td>892562</td>
+										<td>2018/02/01</td>
+										<td>
+											<span class="label label-danger">Banned</span>
+										</td>
+									</tr>
+									<tr>
+										<td>74849293</td>
+										<td>User One</td>
+										<td>75,848</td>
+										<td>892562</td>
+										<td>2018/02/01</td>
+										<td>
+											<span class="label label-danger">Banned</span>
+										</td>
+									</tr>
+									<tr>
+										<td>74849293</td>
+										<td>User One</td>
+										<td>75,848</td>
+										<td>892562</td>
+										<td>2018/02/01</td>
+										<td>
+											<span class="label label-danger">Banned</span>
+										</td>
+									</tr>
+									<tr>
+										<td>74849293</td>
+										<td>User One</td>
+										<td>75,848</td>
+										<td>892562</td>
+										<td>2018/02/01</td>
+										<td>
+											<span class="label label-danger">Banned</span>
+										</td>
+									</tr>
+									<tr>
+										<td>74849293</td>
+										<td>User One</td>
+										<td>75,848</td>
+										<td>892562</td>
+										<td>2018/02/01</td>
+										<td>
+											<span class="label label-danger">Banned</span>
+										</td>
+									</tr>
+									<tr>
+										<td>74849293</td>
+										<td>User One</td>
+										<td>75,848</td>
+										<td>892562</td>
+										<td>2018/02/01</td>
+										<td>
+											<span class="label label-danger">Banned</span>
+										</td>
+									</tr>
+									<tr>
+										<td>74849293</td>
+										<td>User One</td>
+										<td>75,848</td>
+										<td>892562</td>
+										<td>2018/02/01</td>
+										<td>
+											<span class="label label-danger">Banned</span>
+										</td>
+									</tr>
+								  </tbody>
+							 </table>
+							 <ul class="pagination">
+								<li><a href="table.html#">Prev</a></li>
+								<li class="active">
+								  <a href="table.html#">1</a>
+								</li>
+								<li><a href="table.html#">2</a></li>
+								<li><a href="table.html#">3</a></li>
+								<li><a href="table.html#">4</a></li>
+								<li><a href="table.html#">Next</a></li>
+							  </ul>
+						</div>
+					</div>
+				</div><!--/col-->
+			</div><!--/row-->
+
+
+
+
+		<footer>
+
+			<div class="row">
+
+				<div class="col-sm-5">
+					&copy; 2018 Nouveta.
+				</div><!--/.col-->
+
+				<div class="col-sm-7 text-right">
+					Powered by: Admin</a>
+				</div><!--/.col-->
+
+			</div><!--/.row-->
+
+		</footer>
+
+
+
+
+	<div class="modal fade" id="myModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title">Modal title</h4>
+				</div>
+				<div class="modal-body">
+					<p>Here settings can be configured...</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary">Save changes</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+	<!-- start: JavaScript-->
+	<!--[if !IE]>-->
+
+			<script src="assets/js/jquery-2.1.1.min.js"></script>
+
+	<!--<![endif]-->
+
+	<!--[if IE]>
+
+		<script src="assets/js/jquery-1.11.1.min.js"></script>
+
+	<![endif]-->
+
+	<!--[if !IE]>-->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
+		</script>
+
+	<!--<![endif]-->
+
+	<!--[if IE]>
+
+		<script type="text/javascript">
+	 	window.jQuery || document.write("<script src='assets/js/jquery-1.11.1.min.js'>"+"<"+"/script>");
+		</script>
+
+	<![endif]-->
+	<script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+
+
+	<!-- page scripts -->
+	<script src="assets/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+	<script src="assets/plugins/touchpunch/jquery.ui.touch-punch.min.js"></script>
+	<script src="assets/plugins/moment/moment.min.js"></script>
+	<script src="assets/plugins/fullcalendar/js/fullcalendar.min.js"></script>
+	<!--[if lte IE 8]>
+		<script language="javascript" type="text/javascript" src="assets/plugins/excanvas/excanvas.min.js"></script>
+	<![endif]-->
+	<script src="assets/plugins/flot/jquery.flot.min.js"></script>
+	<script src="assets/plugins/flot/jquery.flot.pie.min.js"></script>
+	<script src="assets/plugins/flot/jquery.flot.stack.min.js"></script>
+	<script src="assets/plugins/flot/jquery.flot.resize.min.js"></script>
+	<script src="assets/plugins/flot/jquery.flot.time.min.js"></script>
+	<script src="assets/plugins/flot/jquery.flot.spline.min.js"></script>
+	<script src="assets/plugins/autosize/jquery.autosize.min.js"></script>
+	<script src="assets/plugins/placeholder/jquery.placeholder.min.js"></script>
+	<script src="assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
+	<script src="assets/plugins/datatables/js/dataTables.bootstrap.min.js"></script>
+	<script src="assets/plugins/raphael/raphael.min.js"></script>
+	<script src="assets/plugins/morris/js/morris.min.js"></script>
+	<script src="assets/plugins/jvectormap/js/jquery-jvectormap-1.2.2.min.js"></script>
+	<script src="assets/plugins/jvectormap/js/jquery-jvectormap-world-mill-en.js"></script>
+	<script src="assets/plugins/jvectormap/js/gdp-data.js"></script>
+	<script src="assets/plugins/gauge/gauge.min.js"></script>
+
+	<!-- theme scripts -->
+	<script src="assets/js/jquery.mmenu.min.js"></script>
+	<script src="assets/js/core.min.js"></script>
+
+	<!-- inline scripts related to this page -->
+	<script src="assets/js/pages/index.js"></script>
+	<script src="assets/plugins/jquery-cookie/jquery.cookie.min.js"></script>
+	<script src="assets/js/demo.min.js"></script>
+
+	<!-- end: JavaScript-->
+
+</body>
+</html>
