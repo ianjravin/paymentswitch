@@ -32,10 +32,11 @@
 		<link href="assets/plugins/fullcalendar/css/fullcalendar.css" rel="stylesheet">
 		<link href="assets/plugins/morris/css/morris.css" rel="stylesheet">
 		<link href="assets/plugins/jvectormap/css/jquery-jvectormap-1.2.2.css" rel="stylesheet">
-
+   <link href="assets/plugins/xcharts/css/xcharts.min.css" rel=" stylesheet">
 	    <!-- Custom styles for this template -->
 	    <link href="assets/css/style.min.css" rel="stylesheet" id="main-style">
 		<link href="assets/css/add-ons.min.css" rel="stylesheet">
+
 
 		<!-- Themes -->
 	    <link href="assets/css/themes.min.css" rel="stylesheet">
@@ -298,40 +299,27 @@
 							</div>
 						</div>
 					</div>
+
+					<button type="button" class="btn btn-primary btn-lg btn-block"></i>Reconcile Payments</button>
 				</div><!--/col-->
 
-				<div class="col-lg-9 col-md-8">
+				<div class="col-sm-9">
 
-					<div class="panel panel-default">
+								<div class="panel panel-default">
+									<div class="panel-heading">
+										<h2><i class="fa fa-bar-chart-o"></i>Transactions</h2>
+										<div class="panel-actions">
+											<a href="charts-xcharts.html#" class="btn-setting"><i class="fa fa-wrench"></i></a>
+											<a href="charts-xcharts.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
+											<a href="charts-xcharts.html#" class="btn-close"><i class="fa fa-times"></i></a>
+										</div>
+									</div>
+									<div class="panel-body">
+										<figure class="demo" id="chart" style="height: 400px"></figure>
+									</div>
+								</div>
 
-						<div class="panel-heading">
-							<i class="fa fa-check"></i><h2>Transactions</h2>
-
-							<div class="panel-actions">
-								<a href="index.html#" class="btn-setting"><i class="fa fa-wrench"></i></a>
-								<a href="index.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
-								<a href="index.html#" class="btn-close"><i class="fa fa-times"></i></a>
-							</div>
-							<label class="switch switch-info pull-right">
-						      	<input type="checkbox" class="switch-input" checked>
-						      	<span class="switch-label" data-on="On" data-off="Off"></span>
-						      	<span class="switch-handle"></span>
-						    </label>
-							<span class="pull-right">Live</span>
-						</div>
-
-						<div class="panel-body">
-
-							<p><small></small></p>
-							</br/>
-
-							<div id="flot-main" style="height:292px"></div>
-
-						</div>
-
-					</div>
-
-				</div><!--/col-->
+							</div><!--/col-->
 
 
 
@@ -341,6 +329,7 @@
 
 
 			<div class="row">
+
 				<div class="col-lg-12">
 					<div class="panel panel-default">
 						<div class="panel-heading">
@@ -355,154 +344,144 @@
 							<table class="table table-bordered table-striped table-condensed">
 								  <thead>
 									  <tr>
-										  <th>Account</th>
-										  <th>Account Name</th>
+										  <th>Time</th>
+										  <th>Narration</th>
+										  <th>Source</th>
 										  <th>Amount</th>
-										  <th>Paid to</th>
-											<th>Date</th>
 											<th>Status</th>
 									  </tr>
 								  </thead>
 								  <tbody>
 									<tr>
-										<td>74849293</td>
-										<td>User One</td>
-										<td>75,848</td>
-										<td>892562</td>
-										<td>2018/02/01</td>
+										<td> 2018-02-01   06:27.23</td>
+										<td>0729893801</td>
+										<td>User one</td>
+										<td>74,894</td>
 										<td>
 											<span class="label label-success">Active</span>
 										</td>
 									</tr>
 									<tr>
-										<td>74849293</td>
-										<td>User One</td>
-										<td>75,848</td>
-										<td>892562</td>
-										<td>2018/02/01</td>
-										<td>
-											<span class="label label-danger">Banned</span>
-										</td>
-									</tr>
-									<tr>
-										<td>74849293</td>
-										<td>User One</td>
-										<td>75,848</td>
-										<td>892562</td>
-										<td>2018/02/01</td>
+										<td> 2018-02-01   06:27.23</td>
+										<td>73848292</td>
+										<td>User Two</td>
+										<td>9,369</td>
 										<td>
 											<span class="label label-default">Inactive</span>
 										</td>
 									</tr>
 									<tr>
-										<td>74849293</td>
-										<td>User One</td>
-										<td>75,848</td>
-										<td>892562</td>
-										<td>2018/02/01</td>
+										<td>2018-02-01   06:27.23</td>
+										<td>0729893801</td>
+										<td>User one</td>
+										<td>74,894</td>
+										<td>
+											<span class="label label-default">Inactive</span>
+										</td>
+									</tr>
+									<tr>
+										<td> 2018-02-01   06:27.23</td>
+										<td>0729893801</td>
+										<td>User one</td>
+										<td>74,894</td>
 										<td>
 											<span class="label label-warning">Pending</span>
 										</td>
 									</tr>
 									<tr>
-										<td>74849293</td>
-										<td>User One</td>
-										<td>75,848</td>
-										<td>892562</td>
-										<td>2018/02/01</td>
+										<td> 2018-02-01   06:27.23</td>
+										<td>0729893801</td>
+										<td>User one</td>
+										<td>74,894</td>
 										<td>
 											<span class="label label-success">Active</span>
 										</td>
 									</tr>
 									<tr>
-										<td>74849293</td>
-										<td>User One</td>
-										<td>75,848</td>
-										<td>892562</td>
-										<td>2018/02/01</td>
+										<td> 2018-02-01   06:27.23</td>
+										<td>0729893801</td>
+										<td>User one</td>
+										<td>74,894</td>
 										<td>
-											<span class="label label-danger">Banned</span>
+											<span class="label label-default">Inactive</span>
 										</td>
 									</tr>
 									<tr>
-										<td>74849293</td>
-										<td>User One</td>
-										<td>75,848</td>
-										<td>892562</td>
-										<td>2018/02/01</td>
+										<td> 2018-02-01   06:27.23</td>
+										<td>0729893801</td>
+										<td>User one</td>
+										<td>74,894</td>
 										<td>
-											<span class="label label-danger">Banned</span>
+											<span class="label label-default">Inactive</span>
 										</td>
 									</tr>
 									<tr>
-										<td>74849293</td>
-										<td>User One</td>
-										<td>75,848</td>
-										<td>892562</td>
-										<td>2018/02/01</td>
+										<td>2018-02-01   06:27.23</td>
+										<td>0729893801</td>
+										<td>User one</td>
+										<td>74,894</td>
 										<td>
-											<span class="label label-danger">Banned</span>
+											<span class="label label-default">Inactive</span>
 										</td>
 									</tr>
 									<tr>
-										<td>74849293</td>
-										<td>User One</td>
-										<td>75,848</td>
-										<td>892562</td>
-										<td>2018/02/01</td>
+										<td> 2018-02-01   06:27.23</td>
+										<td>0729893801</td>
+										<td>User one</td>
+										<td>74,894</td>
 										<td>
-											<span class="label label-danger">Banned</span>
+											<span class="label label-default">Inactive</span>
 										</td>
 									</tr>
 									<tr>
-										<td>74849293</td>
-										<td>User One</td>
-										<td>75,848</td>
-										<td>892562</td>
-										<td>2018/02/01</td>
+										<td> 2018-02-01   06:27.23</td>
+										<td>0729893801</td>
+										<td>User one</td>
+										<td>74,894</td>
 										<td>
-											<span class="label label-danger">Banned</span>
+											<span class="label label-default">Inactive</span>
 										</td>
 									</tr>
 									<tr>
-										<td>74849293</td>
-										<td>User One</td>
-										<td>75,848</td>
-										<td>892562</td>
-										<td>2018/02/01</td>
+										<td> 2018-02-01   06:27.23</td>
+										<td>0729893801</td>
+										<td>User one</td>
+										<td>74,894</td>
 										<td>
-											<span class="label label-danger">Banned</span>
+											<span class="label label-default">Inactive</span>
 										</td>
 									</tr>
 									<tr>
-										<td>74849293</td>
-										<td>User One</td>
-										<td>75,848</td>
-										<td>892562</td>
-										<td>2018/02/01</td>
+										<td>2018-02-01   06:27.23</td>
+										<td>0729893801</td>
+										<td>User one</td>
+										<td>74,894</td>
 										<td>
-											<span class="label label-danger">Banned</span>
+											<span class="label label-default">Inactive</span>
 										</td>
 									</tr>
 									<tr>
-										<td>74849293</td>
-										<td>User One</td>
-										<td>75,848</td>
-										<td>892562</td>
-										<td>2018/02/01</td>
+										<td> 2018-02-01   06:27.23</td>
+										<td>0729893801</td>
+										<td>User one</td>
+										<td>74,894</td>
 										<td>
-											<span class="label label-danger">Banned</span>
+											<span class="label label-default">Inactive</span>
 										</td>
 									</tr>
 									<tr>
-										<td>74849293</td>
-										<td>User One</td>
-										<td>75,848</td>
-										<td>892562</td>
-										<td>2018/02/01</td>
+										<td> 2018-02-01   06:27.23</td>
+										<td>0729893801</td>
+										<td>User one</td>
+										<td>74,894</td>
 										<td>
-											<span class="label label-danger">Banned</span>
+											<span class="label label-default">Inactive</span>
 										</td>
+									</tr>
+									<br>
+									<tr>
+										<td>Total</td>
+										<td>873,929</td>
 									</tr>
 								  </tbody>
 							 </table>
@@ -599,6 +578,8 @@
 	<script src="assets/plugins/touchpunch/jquery.ui.touch-punch.min.js"></script>
 	<script src="assets/plugins/moment/moment.min.js"></script>
 	<script src="assets/plugins/fullcalendar/js/fullcalendar.min.js"></script>
+	<script src="assets/plugins/xcharts/js/xcharts.min.js"></script>
+	<script src="assets/plugins/d3/d3.min.js"></script>
 	<!--[if lte IE 8]>
 		<script language="javascript" type="text/javascript" src="assets/plugins/excanvas/excanvas.min.js"></script>
 	<![endif]-->
@@ -624,9 +605,11 @@
 	<script src="assets/js/core.min.js"></script>
 
 	<!-- inline scripts related to this page -->
+	<script src="assets/js/pages/charts-xcharts.js"></script>
 	<script src="assets/js/pages/index.js"></script>
 	<script src="assets/plugins/jquery-cookie/jquery.cookie.min.js"></script>
 	<script src="assets/js/demo.min.js"></script>
+
 
 	<!-- end: JavaScript-->
 
